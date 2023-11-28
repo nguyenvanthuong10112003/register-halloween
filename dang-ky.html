@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký lễ hội Halloween</title>
+    <!-- Style-->
+    <link rel="stylesheet" href="./style.css">
+    <!-- JQuery-->
+    <script src="./jquery.js"></script>
+</head>
+<body>
+    <div id="main">
+        <img src="./images/back-ground-1.png" alt="back-ground" id="back-ground">
+        <div id="box-register" class="box">
+            <span id="icon-dark">
+                <img src="./images/bingo-doi.png" alt="doi">
+                <img src="./images/connhen.png" alt="con-nhen" class="con-nhen">
+                <img src="./images/ngoinha1.png" alt="mat-trang">
+            </span>
+            <h4 class="box-title">Đăng ký lễ hội Halloween</h4>
+            <span class="error" id="error"></span>
+            <form id="form-register" method="GET" action="#"> 
+                <div class="form-input">
+                    <label for="full-name" class="title-input">Họ và tên</label>
+                    <input type="text" placeholder="Nhập họ và tên" name="full-name" class="place-input" id="input-full-name">
+                    <span class="error" id="errorFullName"></span>
+                </div>
+                <div class="form-input">
+                    <label for="gender" class="title-input">Giới tính</label>
+                    <div class="place-input">
+                        <input type="radio" name="gender" id="gender-nam" value="nam" >
+                        <label for="gender-nam" style="font-weight: 400;">Nam</label>
+                        <input type="radio" name="gender" id="gender-nu" value="nu" >
+                        <label for="gender-nu" style="font-weight: 400;">Nữ</label>
+                    </div>
+                    <span class="error" id="errorGender"></span>
+                </div>
+                <div class="form-input">
+                    <label for="date-of-birth" class="title-input">Ngày sinh</label>
+                    <input type="date" name="date-of-birth" class="place-input" id="input-date-of-birth">
+                    <span class="error" id="errorDateOfBirth"></span>
+                </div>
+                <div class="form-input">
+                    <label for="address" class="title-input">Địa chỉ</label>
+                    <div class="place-input">
+                        <div class="form-input">
+                            <select name="tinh-tp" id="tinh-tp">
+                                <option>-Chọn tỉnh-</option>
+                            </select>
+                            <select name="quan-huyen" id="quan-huyen">
+                                <option>-Chọn huyện-</option>
+                            </select>
+                            <select name="phuong-xa" id="phuong-xa">
+                                <option>-Chọn xã-</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="place-input">
+                        <input type="text" name="dia-chi-cu-the" id="dia-chi-cu-the" placeholder="Nhập địa chỉ cụ thể">
+                    </div>                  
+                    <div class="place-input">
+                        <input type="text" class="input-disabled-address" disabled>
+                        <span class="error" id="errorDiaChi"></span>
+                    </div>
+                </div>
+                <div class="form-input">
+                    <label for="phone-number" class="title-input">Số điện thoại</label>
+                    <input type="text" name="phone-number" class="place-input" id="input-phone-number">
+                    <span class="error" id="errorPhoneNumber"></span>
+                </div>
+                <div class="form-input">
+                    <button type="button" class="btn-register-submit">Đăng ký</button>
+                    <button type="button" class="cancel">Hủy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
