@@ -100,7 +100,7 @@ $(document).ready(function () {
   })
   $('.cancel').click(function (){
     let href = window.location.pathname.split('/')
-    window.location = href.reduce((result, item, index) => {
+    window.location = window.location.origin + href.reduce((result, item, index) => {
       if (index == href.length - 1)
         return result
       return result + "/" + item;
