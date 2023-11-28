@@ -19,7 +19,7 @@
                 <img src="./images/ngoinha1.png" alt="mat-trang">
             </span>
             <h4 class="box-title">Chúc mừng bạn đã đăng ký thành công</h4>
-            <button type="button">Trở về</button>
+            <button id="back" type="button">Trở về</button>
         </div>
     </div>
     <a href=""></a>
@@ -36,3 +36,13 @@
         opacity: 1;
     }
 </style>
+<script>
+    $('#back').click(function () {
+        let href = window.location.pathname.split('/')
+          window.location = href.reduce((result, item, index) => {
+            if (index == href.length - 1)
+              return result
+            return result + "/" + item;
+          }, '') + "/index.html"
+    })
+</script>
