@@ -21,7 +21,7 @@ var open = false;
 $(document).ready(function () {
   nutToiTrangDangKy.click(function () {
     let href = window.location.pathname.split('/')
-    window.location = href.reduce((result, item, index) => {
+    window.location = window.location.origin + href.reduce((result, item, index) => {
       if (index == href.length - 1)
         return result
       return result + "/" + item;
@@ -217,7 +217,7 @@ var addData = function (data) {
       dataType: 'json',
       data: data,
       success: function (data) {
-          let href = window.location.pathname.split('/')
+          let href = window.location.origin + window.location.pathname.split('/')
           window.location = href.reduce((result, item, index) => {
             if (index == href.length - 1)
               return result
